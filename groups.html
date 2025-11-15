@@ -1,0 +1,13 @@
+<div class="p-3">
+    <h2>Your Groups</h2>
+
+    <div class="mt-3"
+         hx-get="/api/users/{{userId}}/groups"
+         hx-ext="headers"
+         headers='{"Authorization":"Bearer {{jwtToken}}"}'
+         hx-trigger="load"
+         hx-target="#groupResults">
+    </div>
+
+    <div id="groupResults" class="mt-3"></div>
+</div>

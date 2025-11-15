@@ -1,0 +1,13 @@
+<div class="p-3">
+    <h2>Your Messages</h2>
+
+    <div class="mt-3"
+         hx-get="/api/messages?OwnerId={{userId}}&Type=1"
+         hx-ext="headers"
+         headers='{"Authorization":"Bearer {{jwtToken}}"}'
+         hx-trigger="load"
+         hx-target="#messageResults">
+    </div>
+
+    <div id="messageResults" class="mt-3"></div>
+</div>

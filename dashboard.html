@@ -1,0 +1,21 @@
+<div class="p-3">
+
+    <h2>Dashboard</h2>
+
+    <div class="card p-3 mt-3 shadow-sm">
+        <h5>Your Overview</h5>
+
+        <!-- Load workspaces -->
+        <div 
+            hx-get="/api/users/{{userId}}/workspaces"
+            hx-trigger="load"
+            hx-ext="headers"
+            headers='{"Authorization":"Bearer {{jwtToken}}"}'
+            hx-target="#workspaceList"
+            hx-swap="innerHTML">
+        </div>
+
+        <div id="workspaceList" class="mt-3"></div>
+    </div>
+
+</div>

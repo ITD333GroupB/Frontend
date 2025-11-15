@@ -1,0 +1,13 @@
+<div class="p-3">
+    <h2>Your Tasks</h2>
+
+    <div class="mt-3"
+         hx-get="/api/users/{{userId}}/tasks"
+         hx-ext="headers"
+         headers='{"Authorization":"Bearer {{jwtToken}}"}'
+         hx-trigger="load"
+         hx-target="#taskResults">
+    </div>
+
+    <div id="taskResults" class="mt-3"></div>
+</div>

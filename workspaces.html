@@ -1,0 +1,13 @@
+<div class="p-3">
+    <h2>Your Workspaces</h2>
+
+    <div class="mt-3"
+         hx-get="/api/users/{{userId}}/workspaces"
+         hx-ext="headers"
+         headers='{"Authorization":"Bearer {{jwtToken}}"}'
+         hx-trigger="load"
+         hx-target="#workspaceResults">
+    </div>
+
+    <div id="workspaceResults" class="mt-3"></div>
+</div>
